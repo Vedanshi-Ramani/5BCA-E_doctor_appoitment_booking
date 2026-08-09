@@ -14,16 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Doctor_profile.aspx",
               "DocumentMoniker": "E:\\sem-5\\ASP.NET\\5BCA-E_online_doctor_appoitment_booking\\project_doctor_appoitment\\Doctor_profile.aspx",
               "RelativeDocumentMoniker": "project_doctor_appoitment\\Doctor_profile.aspx",
-              "ToolTip": "E:\\sem-5\\ASP.NET\\5BCA-E_online_doctor_appoitment_booking\\project_doctor_appoitment\\Doctor_profile.aspx*",
-              "RelativeToolTip": "project_doctor_appoitment\\Doctor_profile.aspx*",
+              "ToolTip": "E:\\sem-5\\ASP.NET\\5BCA-E_online_doctor_appoitment_booking\\project_doctor_appoitment\\Doctor_profile.aspx",
+              "RelativeToolTip": "project_doctor_appoitment\\Doctor_profile.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2026-08-03T04:01:31.586Z",
