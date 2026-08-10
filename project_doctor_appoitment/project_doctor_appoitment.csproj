@@ -73,6 +73,8 @@
     <Content Include="css\responsive.css" />
     <Content Include="css\style.css" />
     <Content Include="Doctor_profile.aspx" />
+    <Content Include="feedback.aspx" />
+    <Content Include="history.aspx" />
     <Content Include="home.aspx" />
     <Content Include="index.aspx" />
     <Content Include="js\appointment.js" />
@@ -80,6 +82,8 @@
     <Content Include="js\search.js" />
     <Content Include="js\validation.js" />
     <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="payment.aspx" />
     <Content Include="registration.aspx" />
     <Content Include="search_doctor.aspx" />
     <Content Include="Web.config" />
@@ -113,6 +117,20 @@
     <Compile Include="Doctor_profile.aspx.designer.cs">
       <DependentUpon>Doctor_profile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="feedback.aspx.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="feedback.aspx.designer.cs">
+      <DependentUpon>feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="history.aspx.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="history.aspx.designer.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+    </Compile>
     <Compile Include="home.aspx.cs">
       <DependentUpon>home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -133,6 +151,20 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payment.aspx.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payment.aspx.designer.cs">
+      <DependentUpon>payment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="registration.aspx.cs">

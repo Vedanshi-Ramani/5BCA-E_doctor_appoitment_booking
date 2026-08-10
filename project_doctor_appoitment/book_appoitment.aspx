@@ -876,41 +876,60 @@
                                 Doctor Name</label>
                                 <input type="text" id="txtDoctorName" name="DoctorName" class="form-control" value="Dr. Sarah Khan" readonly>
                             </div>
+
+
                             <div class="col-md-6">
                                 <label for="txtPatientName" class="form-label">
                                 Patient Name</label>
-                                <input type="text" id="txtPatientName" name="PatientName" class="form-control" placeholder="Enter patient name" required>
+<%--                                <input type="text" id="txtPatientName" name="PatientName" class="form-control" placeholder="Enter patient name" required>--%>
+                                <asp:TextBox ID="TextBox1" runat="server" name="PatientName" class="form-control" placeholder="Enter patient name" required></asp:TextBox>
                             </div>
+
                             <div class="col-md-6">
                                 <label for="txtMobile" class="form-label">
                                 Mobile</label>
-                                <input type="tel" id="txtMobile" name="Mobile" class="form-control" placeholder="Enter mobile number" required>
+                                <%--<input type="tel" id="txtMobile" name="Mobile" class="form-control" placeholder="Enter mobile number" required>--%>
+                                <asp:TextBox ID="TextBox2" runat="server" name="Mobile" class="form-control" placeholder="Enter mobile number" required></asp:TextBox>
                             </div>
+
                             <div class="col-md-6">
                                 <label for="txtAppointmentDate" class="form-label">
                                 Appointment Date</label>
                                 <input type="date" id="txtAppointmentDate" name="AppointmentDate" class="form-control" required>
                             </div>
+
                             <div class="col-12">
                                 <label for="ddlTimeSlot" class="form-label">
                                 Available Time Slot</label>
-                                <select id="ddlTimeSlot" name="TimeSlot" class="form-select" required>
+                                <%--<select id="ddlTimeSlot" name="TimeSlot" class="form-select" required>
                                     <option value="">Select Slot</option>
                                     <option value="10:00 AM">10:00 AM</option>
                                     <option value="02:00 PM">02:00 PM</option>
                                     <option value="04:30 PM">04:30 PM</option>
-                                </select>
+                                </select>--%>
+                                <asp:DropDownList ID="DropDownList1" runat="server" name="TimeSlot" class="form-select" required>
+                                    <asp:ListItem>--select time--</asp:ListItem>
+                                    <asp:ListItem>10:00 AM</asp:ListItem>
+                                    <asp:ListItem Value="11:00 AM"></asp:ListItem>
+                                </asp:DropDownList>
                             </div>
+
+
                             <div class="col-12">
                                 <label for="txtReason" class="form-label">
                                 Reason for Visit</label>
-                                <textarea id="txtReason" name="Reason" class="form-control" rows="4" placeholder="Describe symptoms or reason" required></textarea>
+<%--                                <textarea id="txtReason" name="Reason" class="form-control" rows="4" placeholder="Describe symptoms or reason" required></textarea>--%>
+                                <asp:TextBox ID="TextBox3" runat="server" class="form-control" rows="4" placeholder="Describe symptoms or reason" required></asp:TextBox>
                             </div>
+
                             <div class="col-12">
-                                <button type="button" id="btnBookAppointment" class="btn btn-primary rounded-pill px-4" onclick="bookAppointment()">
+                                <%--<button type="button" id="btnBookAppointment" class="btn btn-primary rounded-pill px-4" onclick="bookAppointment()">
                                     Book Appointment
-                                </button>
+                                </button>--%>
+                                <asp:Button ID="Button1" runat="server" Text="Book Appoitment"  class="btn btn-primary rounded-pill px-4" />
                             </div>
+
+
                         </div>
                     </form>
                 </div>
