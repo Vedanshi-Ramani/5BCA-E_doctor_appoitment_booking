@@ -68,6 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="App_Data\book_my_doc.mdf" />
+    <Content Include="App_Data\book_my_doc_log.ldf">
+      <DependentUpon>book_my_doc.mdf</DependentUpon>
+    </Content>
     <Content Include="book_appoitment.aspx" />
     <Content Include="contact.aspx" />
     <Content Include="css\responsive.css" />

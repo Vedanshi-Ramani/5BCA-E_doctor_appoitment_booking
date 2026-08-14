@@ -1,10 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="registration.aspx.cs" Inherits="project_doctor_appoitment.registration" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder2">
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder2">
 
-<%--                *********       home page       ***************--%>
-                <%--<main>
+    <%--                *********       home page       ***************--%>
+    <%--<main>
         <section class="hero-section py-5">
             <div class="container">
                 <div class="row align-items-center g-5">
@@ -347,8 +348,8 @@
             </div>
     </section>
     </main>--%>
-<%--                ***********          about us            *************--%>
-<%--                <main>
+    <%--                ***********          about us            *************--%>
+    <%--                <main>
         <section class="page-hero py-5 bg-light">
             <div class="container">
                 <div class="row align-items-center g-4">
@@ -474,10 +475,10 @@
             </div>
     </section>
     </main>--%>
-                <%--********           contact us          **********--%>
+    <%--********           contact us          **********--%>
 
-<%--                <main>--%>
-        <%--<section class="py-5 bg-light">
+    <%--                <main>--%>
+    <%--<section class="py-5 bg-light">
             <div class="container">
                 <div class="row g-5">
                     <div class="col-lg-5" data-aos="fade-right">
@@ -543,7 +544,7 @@
             </div>
     </section>--%>
 
-        <%--<section class="py-5">
+    <%--<section class="py-5">
             <div class="container">
                 <div class="card border-0 shadow-sm rounded-4 p-5 text-center" data-aos="fade-up">
                     <h3 class="fw-bold">Google Map Placeholder</h3>
@@ -598,118 +599,186 @@
         </div>
     </div>--%>
 
-                <%--********       registration            ****************--%>
+    <%--********       registration            ****************--%>
 
-                <div class="container py-5">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-8" data-aos="fade-up">
-                            <div class="card border-0 shadow rounded-4 p-4">
-                                <div class="text-center mb-4">
-                                    <h2 class="fw-bold">Create Account</h2>
-                                    <p class="text-muted">
-                                        Register to book appointments and manage your profile.</p>
-                                </div>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up">
+                <div class="card border-0 shadow rounded-4 p-4">
+                    <div class="text-center mb-4">
+                        <h2 class="fw-bold">Create Account</h2>
+                        <p class="text-muted">
+                            Register to book appointments and manage your profile.
+                        </p>
+                    </div>
 
-                                <form id="registerForm" novalidate>
+                    <form id="registerForm" novalidate>
 
-                                    <div class="row g-3">
+                        <div class="row g-3">
 
-                                        <div class="col-md-6">
-                                            <label for="txtFirstName" class="form-label">
-                                            First Name</label>
-<%--                                            <input type="text" id="txtFirstName" name="FirstName" class="form-control" placeholder="Enter first name" required>--%>
-                                            <asp:TextBox ID="TextBox1" runat="server" name="FirstName" class="form-control" placeholder="Enter first name" required></asp:TextBox>
-                                        </div>
+                            <div class="col-md-6">
+                                <label for="txtFirstName" class="form-label">
+                                    First Name</label>
+                                <%--                                            <input type="text" id="txtFirstName" name="FirstName" class="form-control" placeholder="Enter first name" required>--%>
+                                <asp:TextBox ID="txtFirstName" runat="server" name="FirstName" class="form-control" placeholder="Enter first name" required></asp:TextBox>
+                            </div>
 
-                                        <div class="col-md-6">
-                                            <label for="txtLastName" class="form-label">
-                                            Last Name</label>
-<%--                                            <input type="text" id="txtLastName" name="LastName" class="form-control" placeholder="Enter last name" required>--%>
-                                            <asp:TextBox ID="TextBox2" runat="server" name="LastName" class="form-control" placeholder="Enter last name" required></asp:TextBox>
-                                        </div>
-                                        
-                                        <div class="col-md-2">
-                                            <label for="txtAge" class="form-label">
-                                            Age</label>
-<%--                                            <input type="number" id="txtAge" name="Age" class="form-control" placeholder="Age" required>--%>
-                                            <asp:TextBox ID="TextBox3" runat="server" name="Age" class="form-control" placeholder="Age" required></asp:TextBox>
-                                        </div>
+                            <div class="col-md-6">
+                                <label for="txtLastName" class="form-label">
+                                    Last Name</label>
+                                <%--                                            <input type="text" id="txtLastName" name="LastName" class="form-control" placeholder="Enter last name" required>--%>
+                                <asp:TextBox ID="txtLastName" runat="server" name="LastName" class="form-control" placeholder="Enter last name" required></asp:TextBox>
+                            </div>
 
-                                        <div class="col-md-4">
-                                            <label for="ddlGender" class="form-label">
-                                            Gender</label>
-                                            <%--<select id="ddlGender" name="Gender" class="form-select" required>
+                            <div class="col-md-2">
+                                <label for="txtAge" class="form-label">
+                                    Age</label>
+                                <%--                                            <input type="number" id="txtAge" name="Age" class="form-control" placeholder="Age" required>--%>
+                                <asp:TextBox ID="txtAge" runat="server" name="Age" class="form-control" placeholder="Age" required></asp:TextBox>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="rdbGender" class="form-label">
+                                    Gender</label>
+                                <%--<select id="ddlGender" name="Gender" class="form-select" required>
                                                 <option value="">Select Gender</option>
                                                 <option value="Male">Male</option>
                                                 <option value="Female">Female</option>
                                                 <option value="Other">Other</option>
                                             </select>--%>
-                                            <asp:RadioButtonList ID="RadioButtonList1" runat="server" name="Gender" class="form-select" required RepeatDirection="Horizontal">
-                                                <asp:ListItem>Male</asp:ListItem>
-                                                <asp:ListItem>Female</asp:ListItem>
-                                            </asp:RadioButtonList>
-                                        </div>
+                                <asp:RadioButtonList ID="rdbGender" runat="server" name="Gender" class="form-select" required RepeatDirection="Horizontal">
+                                    <asp:ListItem>Male</asp:ListItem>
+                                    <asp:ListItem>Female</asp:ListItem>
+                                </asp:RadioButtonList>
+                            </div>
 
-                                        <div class="col-md-6">
-                                            <label for="txtMobile" class="form-label">
-                                            Mobile Number</label>
-<%--                                            <input type="tel" id="txtMobile" name="MobileNumber" class="form-control" placeholder="Enter mobile number" required>--%>
-                                            <asp:TextBox ID="TextBox4" runat="server" name="MobileNumber" class="form-control" placeholder="Enter mobile number" required></asp:TextBox>
-                                        </div>
+                            <div class="col-md-6">
+                                <label for="txtMobile" class="form-label">
+                                    Mobile Number</label>
+                                <%--                                            <input type="tel" id="txtMobile" name="MobileNumber" class="form-control" placeholder="Enter mobile number" required>--%>
+                                <asp:TextBox ID="txtMobile" runat="server" name="MobileNumber" class="form-control" placeholder="Enter mobile number" required></asp:TextBox>
+                            </div>
 
-                                        <div class="col-md-6">
-                                            <label for="txtEmail" class="form-label">
-                                            Email</label>
-<%--                                            <input type="email" id="txtEmail" name="Email" class="form-control" placeholder="Enter email address" required>--%>
-                                            <asp:TextBox ID="TextBox5" runat="server" name="Email" class="form-control" placeholder="Enter email address" required></asp:TextBox>
-                                        </div>
+                            <div class="col-md-6">
+                                <label for="txtEmail" class="form-label">
+                                    Email</label>
+                                <%--                                            <input type="email" id="txtEmail" name="Email" class="form-control" placeholder="Enter email address" required>--%>
+                                <asp:TextBox ID="txtEmail" runat="server" name="Email" class="form-control" placeholder="Enter email address" required></asp:TextBox>
+                            </div>
 
-                                        <div class="col-md-6">
-                                            <label for="txtPassword" class="form-label">
-                                            Password</label>
-<%--                                            <input type="password" id="txtPassword" name="Password" class="form-control" placeholder="Create password" required>--%>
-                                            <asp:TextBox ID="TextBox6" runat="server" name="Password" class="form-control" placeholder="Create password" required TextMode="Password"></asp:TextBox>
-                                        </div>
+                            <div class="col-md-6">
+                                <label for="txtPassword" class="form-label">
+                                    Password</label>
+                                <%--                                            <input type="password" id="txtPassword" name="Password" class="form-control" placeholder="Create password" required>--%>
+                                <asp:TextBox ID="txtPassword" runat="server" name="Password" class="form-control" placeholder="Create password" required TextMode="Password"></asp:TextBox>
+                            </div>
 
-                                        <div class="col-md-6">
-                                            <label for="txtConfirmPassword" class="form-label">
-                                            Confirm Password</label>
-<%--                                            <input type="password" id="txtConfirmPassword" name="ConfirmPassword" class="form-control" placeholder="Confirm password" required>--%>
-                                            <asp:TextBox ID="TextBox7" runat="server" name="ConfirmPassword" class="form-control" placeholder="Confirm password" required TextMode="Password"></asp:TextBox>
-                                        </div>
+                            <div class="col-md-6">
+                                <label for="txtConfirmPassword" class="form-label">
+                                    Confirm Password</label>
+                                <%--                                            <input type="password" id="txtConfirmPassword" name="ConfirmPassword" class="form-control" placeholder="Confirm password" required>--%>
+                                <asp:TextBox ID="txtConfirmPassword" runat="server" name="ConfirmPassword" class="form-control" placeholder="Confirm password" required TextMode="Password"></asp:TextBox>
+                            </div>
 
-                                        <div class="col-12">
-                                            <label for="txtAddress" class="form-label">
-                                            Address</label>
-<%--                                            <textarea id="txtAddress" name="Address" class="form-control" rows="3" placeholder="Enter your address" required></textarea>--%>
-                                            <asp:TextBox ID="TextBox8" runat="server" name="Address" class="form-control" rows="3" placeholder="Enter your address" required></asp:TextBox>
-                                        </div>
+                            <div class="col-12">
+                                <label for="txtAddress" class="form-label">
+                                    Address</label>
+                                <%--                                            <textarea id="txtAddress" name="Address" class="form-control" rows="3" placeholder="Enter your address" required></textarea>--%>
+                                <asp:TextBox ID="txtAddress" runat="server" name="Address" class="form-control" Rows="3" placeholder="Enter your address" required></asp:TextBox>
+                            </div>
 
-                                        <div class="col-12">
-                                            <label for="fileProfilePhoto" class="form-label">
-                                            Profile Photo</label>
-                                            <input type="file" id="fileProfilePhoto" name="ProfilePhoto" class="form-control" required>
-                                            <img id="imgPreview" class="img-fluid rounded-3 mt-3 d-none" alt="Profile Preview" style="max-height: 180px;">
-                                        </div>
+                            <div class="col-12">
+                                <label for="fileProfilePhoto" class="form-label">
+                                    Profile Photo</label>
+                                <%--<input type="file" id="fileProfilePhoto" name="ProfilePhoto" class="form-control" required>
+                                            <img id="imgPreview" class="img-fluid rounded-3 mt-3 d-none" alt="Profile Preview" style="max-height: 180px;">--%>
 
-                                        <div class="col-12">
-                                            <%--<button type="button" id="btnRegister" class="btn btn-primary rounded-pill px-4" onclick="registerUser()">
+                                <asp:FileUpload ID="fileProfilePhoto" runat="server" name="ProfilePhoto" class="form-control" required />
+                            </div>
+
+                            <div class="col-12">
+                                <%--<button type="button" id="btnRegister" class="btn btn-primary rounded-pill px-4" onclick="registerUser()">
                                                 Register
                                             </button>--%>
-                                            <asp:Button ID="Button1" runat="server" Text="Register" class="btn btn-primary rounded-pill px-4" OnClick="Button1_Click"/>
-                                        </div>
-                                        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-
-                                    </div>
-                                </form>
+                                <asp:Button ID="btnRegister" runat="server" Text="Register" class="btn btn-primary rounded-pill px-4" OnClick="Button1_Click" />
                             </div>
+
+                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                         </div>
-                    </div>
+                    </form>
+                    
+                </div>
+            </div>
+            <center>
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BorderWidth="1px" CellPadding="9" CellSpacing="8">
+                        <Columns>
+                         
+                            <asp:TemplateField HeaderText="Id">
+                                <ItemTemplate>
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Eval("Id") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="FirstName">
+                                <ItemTemplate>
+                                    <asp:Label ID="Label3" runat="server" Text='<%# Eval("FirstName") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="LastName">
+                                <ItemTemplate>
+                                    <asp:Label ID="Label4" runat="server" Text='<%# Eval("LastName") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Age">
+                                <ItemTemplate>
+                                    <asp:Label ID="Label5" runat="server" Text='<%# Eval("Age") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Gender">
+                                <ItemTemplate>
+                                    <asp:Label ID="Label6" runat="server" Text='<%# Eval("Gender") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Mobile">
+                                <ItemTemplate>
+                                    <asp:Label ID="Label7" runat="server" Text='<%# Eval("Mobile") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Email">
+                                <ItemTemplate>
+                                    <asp:Label ID="Label8" runat="server" Text='<%# Eval("Email") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Address">
+                                <ItemTemplate>
+                                    <asp:Label ID="Label9" runat="server" Text='<%# Eval("Address") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="ProfilePhoto">
+                                <ItemTemplate>
+                                    <asp:Image ID="Image1" runat="server" Height="80" Width="80" ImageUrl='<%# Eval("ProfilePhoto") %>' BorderStyle="Solid" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Edit">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="cmdedit">edit</asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Delete">
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="LinkButton2" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="cmddel">Delete</asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                        <EditRowStyle BorderStyle="Solid" />
+                    </asp:GridView>
+                </center>
+
+        </div>
     </div>
 
-                <%--**************     search doctor        ******************--%>
+    <%--**************     search doctor        ******************--%>
 
-           <%--     <main class="py-5 bg-light">
+    <%--     <main class="py-5 bg-light">
     <div class="container">
         <div class="card border-0 shadow rounded-4 p-4 mb-4" data-aos="fade-up">
             <h2 class="fw-bold mb-4">Find Your Doctor</h2>
@@ -777,9 +846,9 @@
     </main>--%>
 
 
-                <%--**********         doctor profile               ***********--%>
+    <%--**********         doctor profile               ***********--%>
 
-           <%--     <main class="py-5 bg-light">
+    <%--     <main class="py-5 bg-light">
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-4" data-aos="fade-right">
@@ -874,8 +943,8 @@
     </div>
     </main>--%>
 
-                <%--***********            book appoitment      **********--%>
-           <%--     <main class="py-5 bg-light">
+    <%--***********            book appoitment      **********--%>
+    <%--     <main class="py-5 bg-light">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8" data-aos="fade-up">
@@ -931,8 +1000,8 @@
     </div>
     </main>--%>
 
-                <%--************       payment       **********--%>
-          <%--      <main class="py-5 bg-light">
+    <%--************       payment       **********--%>
+    <%--      <main class="py-5 bg-light">
     <div class="container">
         <div class="row g-4 justify-content-center">
             <div class="col-lg-8" data-aos="fade-up">
@@ -1003,8 +1072,8 @@
         </div>
     </div>--%>
 
-<%--                    ***********     doctro list     ***********--%>
-           <%--         <main class="py-5 bg-light">
+    <%--                    ***********     doctro list     ***********--%>
+    <%--         <main class="py-5 bg-light">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-4" data-aos="fade-up">
             <div>
@@ -1106,8 +1175,8 @@
     </div>
     </main>--%>
 
-                    <%--********       feed back  ********--%>
-           <%--         <main class="py-5 bg-light">
+    <%--********       feed back  ********--%>
+    <%--         <main class="py-5 bg-light">
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-5" data-aos="fade-right">
@@ -1218,9 +1287,9 @@
     </div>
     </main>--%>
 
-                    <%--**********     logout   *********--%>
+    <%--**********     logout   *********--%>
 
-           <%--         <div class="container py-5">
+    <%--         <div class="container py-5">
                         <div class="row justify-content-center">
                             <div class="col-lg-6" data-aos="fade-up">
                                 <div class="card border-0 shadow rounded-4 p-5 text-center">
