@@ -710,7 +710,7 @@
                 </div>
             </div>
             <center>
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BorderWidth="1px" CellPadding="9" CellSpacing="8">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BorderWidth="1px" CellPadding="9" CellSpacing="8" OnRowCommand="GridView1_RowCommand">
                         <Columns>
                          
                             <asp:TemplateField HeaderText="Id">

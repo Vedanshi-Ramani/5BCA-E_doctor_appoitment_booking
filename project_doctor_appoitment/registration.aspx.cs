@@ -37,6 +37,15 @@ namespace project_doctor_appoitment
                 clear();
                 fillgrid();
             }
+            else
+            {
+                getcon();
+                cmd = new SqlCommand("update user_tbl set FirstName = '"+txtFirstName.Text+"' , LastName = '"+txtLastName.Text+"' , Age = '"+txtAge.Text+"' , Gender = '"+rdbGender.SelectedValue+"' , Mobile = '"+txtMobile.Text+"' , Email = '"+txtEmail.Text+"' where Id = '" + ViewState["id"] +"'",con);
+                cmd.ExecuteNonQuery();
+                clear();
+                fillgrid();
+                btnRegister.Text = "Save";
+            }
         }
         void getcon()
         {
@@ -68,6 +77,49 @@ namespace project_doctor_appoitment
             da.Fill(ds);
             GridView1.DataSource = ds;
             GridView1.DataBind();
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName == "cmdedit")
+            {
+                int id = Convert.ToInt16(e.CommandArgument);
+                ViewState["id"] = id;
+                btnRegister.Text = "Update";
+                filldata();
+            }
+            else
+            {
+                getcon();
+                cmd = new SqlCommand("delete from user_tbl where Id = '" + e.CommandArgument + "' ", con);
+                cmd.ExecuteNonQuery();
+                fillgrid();
+            }
+        }
+
+        void filldata()
+        {
+            da = new SqlDataAdapter("select*from user_tbl where id='" + ViewState["id"] + "'", con);
+            ds = new DataSet();
+            da.Fill(ds);
+
+            //paring 
+            txtFirstName.Text = ds.Tables[0].Rows[0]["FirstName"].ToString();
+            txtLastName.Text = ds.Tables[0].Rows[0]["LastName"].ToString();
+            txtAge.Text = ds.Tables[0].Rows[0]["Age"].ToString();
+            txtMobile.Text = ds.Tables[0].Rows[0]["Mobile"].ToString();
+            txtEmail.Text= ds.Tables[0].Rows[0]["Email"].ToString();
+            txtAddress.Text = ds.Tables[0].Rows[0]["Address"].ToString();
+            
+
+            if (ds.Tables[0].Rows[0]["Gender"].ToString() == "Male")
+            {
+                rdbGender.SelectedValue = "Male";
+            }
+            else
+            {
+                rdbGender.SelectedValue = "Female";
+            }
         }
     }
 }
