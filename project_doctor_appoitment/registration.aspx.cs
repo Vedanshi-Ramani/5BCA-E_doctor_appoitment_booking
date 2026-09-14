@@ -17,7 +17,8 @@ namespace project_doctor_appoitment
         SqlCommand cmd;
         SqlDataAdapter da;
         DataSet ds;
-        string filenm;
+        string filenm; // store the image path
+        string unm; //store the user name and pass it into session
         string s = ConfigurationManager.ConnectionStrings["dbcon"].ConnectionString;
 
         protected void Page_Load(object sender, EventArgs e)

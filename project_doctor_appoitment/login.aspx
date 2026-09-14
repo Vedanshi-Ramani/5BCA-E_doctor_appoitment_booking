@@ -577,14 +577,14 @@
                             <label for="txtUsername" class="form-label">
                             Username</label>
 <%--                            <input type="text" id="txtUsername" name="Username" class="form-control" placeholder="Enter your username" required>--%>
-                            <asp:TextBox ID="TextBox1" runat="server" name="Username" class="form-control" placeholder="Enter your username" required></asp:TextBox>
+                            <asp:TextBox ID="txtunm" runat="server" name="Username" class="form-control" placeholder="Enter your username" required></asp:TextBox>
                         </div>
 
                         <div class="mb-3">
                             <label for="txtPassword" class="form-label">
                             Password</label>
 <%--                            <input type="password" id="txtPassword" name="Password" class="form-control" placeholder="Enter your password" required>--%>
-                            <asp:TextBox ID="TextBox2" runat="server" name="Password" class="form-control" placeholder="Enter your password" required TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="txtpass" runat="server" name="Password" class="form-control" placeholder="Enter your password" required TextMode="Password"></asp:TextBox>
                         </div>
 
                         <div class="form-check mb-3">
@@ -606,7 +606,7 @@
                     </form>
                     <div class="text-center mt-4">
                         <p class="mb-0">
-                            Don’t have an account? <a href="register.html" class="text-decoration-none">Register here</a></p>
+                            Don’t have an account? <a href="register.aspx" class="text-decoration-none">Register here</a></p>
                     </div>
                 </div>
             </div>

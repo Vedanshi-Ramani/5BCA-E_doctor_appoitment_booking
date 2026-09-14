@@ -15,13 +15,13 @@ namespace project_doctor_appoitment
     {
 
         /// <summary>
-        /// TextBox1 control.
+        /// txtunm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtunm;
 
         /// <summary>
         /// TextBox2 control.

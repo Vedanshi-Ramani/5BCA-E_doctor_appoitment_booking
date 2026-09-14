@@ -6,6 +6,8 @@
 <%--                *********       home page       ***************--%>
                 <main>
         <!-- Hero Section -->
+
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         <section class="hero-section py-5">
             <div class="container">
                 <div class="row align-items-center g-5">

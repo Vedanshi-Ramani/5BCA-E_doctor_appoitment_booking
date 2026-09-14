@@ -882,7 +882,7 @@
                                 <label for="txtPatientName" class="form-label">
                                 Patient Name</label>
 <%--                                <input type="text" id="txtPatientName" name="PatientName" class="form-control" placeholder="Enter patient name" required>--%>
-                                <asp:TextBox ID="TextBox1" runat="server" name="PatientName" class="form-control" placeholder="Enter patient name" required></asp:TextBox>
+                                <asp:TextBox ID="txtunm" runat="server" name="PatientName" class="form-control"  required></asp:TextBox>
                             </div>
 
                             <div class="col-md-6">
@@ -926,7 +926,7 @@
                                 <%--<button type="button" id="btnBookAppointment" class="btn btn-primary rounded-pill px-4" onclick="bookAppointment()">
                                     Book Appointment
                                 </button>--%>
-                                <asp:Button ID="Button1" runat="server" Text="Book Appoitment"  class="btn btn-primary rounded-pill px-4" />
+                                <asp:Button ID="Button1" runat="server" Text="Book Appoitment"  class="btn btn-primary rounded-pill px-4" OnClick="Button1_Click" />
                             </div>
 
 
